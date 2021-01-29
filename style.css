@@ -104,7 +104,7 @@ nav ul li a:hover, a.active{
     margin: 10px 5px 0px 0px;
     word-spacing: 20px;
 }
-.count_btn{
+.count_btn, #close_btn{
     width: 20px;
     font-size: 20px;
     font-weight: bold;
@@ -112,6 +112,7 @@ nav ul li a:hover, a.active{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    outline: none;
 }
 .booking-form .inputs{
     display: grid;
@@ -161,4 +162,9 @@ nav ul li a:hover, a.active{
 #greetings p{
     color: #313030;
     margin-bottom: 20px;
+}
+#close_btn{
+    position: absolute;
+    top: 0;
+    right: 0;
 }

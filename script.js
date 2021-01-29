@@ -2,27 +2,16 @@
 const firstClassIncrement = document.getElementById('first_increment_btn');
 firstClassIncrement.addEventListener('click', function () {
     ticketCountUpdate('first_class', true);  // call ticketCountUpdate function
-    ticketFareCalculate();
-    // const inputTicket = document.getElementById('first_class');
-    // const ticketCount = parseInt(inputTicket.value);
-    // const newTicketCount = ticketCount + 1;
-    // inputTicket.value = newTicketCount;
-    // console.log('increment btn clicked');
-    // console.log(inputTicket.value);
+    ticketFareCalculate();                // call ticketFareCalculate function    
 });
 
 const firstClassDecrement = document.getElementById('first_decrement_btn');
 firstClassDecrement.addEventListener('click', function () {
     ticketCountUpdate('first_class', false);  // call ticketCountUpdate function
-    ticketFareCalculate();
-    // const inputTicket = document.getElementById('first_class');
-    // const ticketCount = parseInt(inputTicket.value);
-    // const newTicketCount = ticketCount - 1;
-    // inputTicket.value = newTicketCount;
-    // console.log('decrement btn clicked');
-    // console.log(inputTicket.value);
+    ticketFareCalculate();                // call ticketFareCalculate function    
 });
 
+// economy class section
 const economyClassIncrement = document.getElementById('economy_increment_btn');
 economyClassIncrement.addEventListener('click', function () {
     ticketCountUpdate('economy_class', true);  // call ticketCountUpdate function
@@ -36,10 +25,9 @@ economyClassDecrement.addEventListener('click', function () {
 });
 
 // function for ticket count update
-
 function ticketCountUpdate(id, isIncrease) {
-    const inputTicket = document.getElementById(id); // have to call ticketFareUpdate() function
-    const ticketCount = parseInt(inputTicket.value); // have to call ticketFareUpdate() function
+    const inputTicket = document.getElementById(id);
+    const ticketCount = parseInt(inputTicket.value); 
     let newTicketCount = ticketCount;
     if (isIncrease == true) {
         newTicketCount = ticketCount + 1;
@@ -48,25 +36,17 @@ function ticketCountUpdate(id, isIncrease) {
         newTicketCount = ticketCount - 1;
     }
     inputTicket.value = newTicketCount;
-    console.log('decrement btn clicked');
-    console.log(inputTicket.value);
 };
 
-// ticket fare update
+// ticket fare calculate function
 
 function ticketFareCalculate() {
     const firstClassTicketCount = getTicketInput('first_class');
     const economyClassTicketCount = getTicketInput('economy_class');
-
-    // const inputTicket = document.getElementById('first_class');
-    // const firstClassTicketCount = parseInt(inputTicket.value);
-
-    // const inputTicket = document.getElementById('economy_class');
-    // const economyClassTicketCount = parseInt(inputTicket.value);
-
+    // calculate ticket fare
     let firstClassFare = 150;
     let economyClassFare = 100;
-    const totalTicketFare = firstClassTicketCount * firstClassFare + economyClassTicketCount * economyClassFare;
+    const totalTicketFare = (firstClassTicketCount * firstClassFare) + (economyClassTicketCount * economyClassFare);
     document.getElementById('ticket_fare').innerText = totalTicketFare;
     // calculate tax amount
     const taxAmount = Math.round(totalTicketFare * .1);
@@ -74,11 +54,9 @@ function ticketFareCalculate() {
     // calculate total fare
     const grandTotal = totalTicketFare + taxAmount;
     document.getElementById('total_amount').innerText = grandTotal;
-
 };
 
 // ticket input function
-
 function getTicketInput(id) {
     const inputTicket = document.getElementById(id);
     const ticketCount = parseInt(inputTicket.value);
@@ -87,10 +65,16 @@ function getTicketInput(id) {
 };
 
 //  greetings for booking
-
 const booking = document.getElementById('booking').addEventListener('click', function () {
     const greetings = document.getElementById('greetings');
     greetings.style.display = 'block'
 });
+
+// remove greetings message
+
+document.getElementById('close_btn').addEventListener('click', function () {
+    const removeMessage = document.getElementById('greetings');
+    removeMessage.remove();
+})
 
 
