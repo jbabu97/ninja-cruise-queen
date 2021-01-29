@@ -39,7 +39,6 @@ function ticketCountUpdate(id, isIncrease) {
 };
 
 // ticket fare calculate function
-
 function ticketFareCalculate() {
     const firstClassTicketCount = getTicketInput('first_class');
     const economyClassTicketCount = getTicketInput('economy_class');
@@ -71,7 +70,6 @@ const booking = document.getElementById('booking').addEventListener('click', fun
 });
 
 // remove greetings message
-
 document.getElementById('close_btn').addEventListener('click', function () {
     const removeMessage = document.getElementById('greetings');
     removeMessage.remove();
