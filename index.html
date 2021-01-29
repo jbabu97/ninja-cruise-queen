@@ -38,11 +38,11 @@
         <div class="booking-form">
             <h3>Book Ocean Time</h3>
             <div class="input-group">
-                <label for="">Flying From</label>
+                <label for="">Cruise Start From</label>
                 <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
             </div>
             <div class="input-group">
-                <label for="">Flying To</label>
+                <label for="">Cruise Finish To</label>
                 <input class="inp-style" type="text" name="" placeholder="New York, United States">
             </div>
             <div class="inputs">
@@ -62,8 +62,8 @@
                     <input id="first_class" class="inp-style inp-width" type="number" value="0">
                 </div>
                 <div class="plus-minus-btn">
-                    <button id="first_increment_btn" class="btn">+</button>
-                    <button id="first_decrement_btn" class="btn">-</button>
+                    <button id="first_increment_btn" class="count_btn">+</button>
+                    <button id="first_decrement_btn" class="count_btn">-</button>
                 </div>
             </div>
             <!-- economy class -->
@@ -73,8 +73,8 @@
                     <input id="economy_class" class="inp-style inp-width" type="number" value="0">
                 </div>
                 <div class="plus-minus-btn">
-                    <button id="economy_increment_btn" class="btn">+</button>
-                    <button id="economy_decrement_btn" class="btn">-</button>
+                    <button id="economy_increment_btn" class="count_btn">+</button>
+                    <button id="economy_decrement_btn" class="count_btn">-</button>
                 </div>
             </div>
             <div class="calculations">
@@ -105,7 +105,14 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button id="booking" class="btn-style">Book Now</button>
+        </div>
+
+        <div id="greetings" class="greetings">
+            <h4>WELCOME TO</h4>
+            <h1>CRUISE QUEEN</h1>
+            <p>Congratulations! Your booking has been successfully completed. Have a nice and safe tour.</p>
+            <p>Thank You for being with us.</p>
         </div>
     </main>
 

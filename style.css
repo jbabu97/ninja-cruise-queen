@@ -43,6 +43,7 @@ nav ul li a:hover, a.active{
     grid-template-columns: 2fr 3fr;
     gap: 70px;
     align-items: center;
+    position: relative;
 }
 .booking-content{
     color: #fff;
@@ -103,7 +104,7 @@ nav ul li a:hover, a.active{
     margin: 10px 5px 0px 0px;
     word-spacing: 20px;
 }
-.btn{
+.count_btn{
     width: 20px;
     font-size: 20px;
     font-weight: bold;
@@ -126,8 +127,38 @@ nav ul li a:hover, a.active{
     color: #fff;
     font-weight: 500;
     background-color:  #E33741;
+    cursor: pointer;
 }
 .amount{
     display: flex;
     justify-content: space-between;
+}
+
+#greetings{
+    height: 300px;
+    width: 550px;
+    margin: 200px auto;
+    padding: 30px;
+    text-align: center;
+    border-radius: 7px;
+    background-color: #7f8c8d;
+    position: absolute;
+    top: 0;
+    left: 300px;
+    display: none;
+}
+
+#greetings h1{
+    color: crimson;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+#greetings h4{
+    color: white;
+    text-align: center;
+}
+#greetings p{
+    color: #313030;
+    margin-bottom: 20px;
 }
