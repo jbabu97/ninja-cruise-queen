@@ -103,6 +103,15 @@ nav ul li a:hover, a.active{
     margin: 10px 5px 0px 0px;
     word-spacing: 20px;
 }
+.btn{
+    width: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #E33741;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 .booking-form .inputs{
     display: grid;
     grid-template-columns: 1fr 1fr;

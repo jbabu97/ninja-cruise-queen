@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curise Booking</title>
+    <title>Ninja Cruise Booking</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
@@ -39,7 +39,7 @@
             <h3>Book Ocean Time</h3>
             <div class="input-group">
                 <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
+                <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
             </div>
             <div class="input-group">
                 <label for="">Flying To</label>
@@ -55,23 +55,26 @@
                     <input class="inp-style" type="date" name="">
                 </div>
             </div>
+            <!-- first class -->
             <div class="input-group f-class">
                 <div>
                     <label for="">First Class ($150)</label>
-                    <input class="inp-style inp-width" type="number" name="">
+                    <input id="first_class" class="inp-style inp-width" type="number" value="0">
                 </div>
                 <div class="plus-minus-btn">
-                    <p>+ -</p>
+                    <button id="first_increment_btn" class="btn">+</button>
+                    <button id="first_decrement_btn" class="btn">-</button>
                 </div>
             </div>
-            
+            <!-- economy class -->
             <div class="input-group f-class">
                 <div>
                     <label for="">Economy ($100)</label>
-                    <input class="inp-style inp-width" type="number" name="">
+                    <input id="economy_class" class="inp-style inp-width" type="number" value="0">
                 </div>
                 <div class="plus-minus-btn">
-                    <p> <span>+</span> <span>-</span> </p>
+                    <button id="economy_increment_btn" class="btn">+</button>
+                    <button id="economy_decrement_btn" class="btn">-</button>
                 </div>
             </div>
             <div class="calculations">
@@ -80,7 +83,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p>$500</p>
+                        <p>$ <span id="ticket_fair">00</span></p>
                     </div>
                 </div>
 
@@ -89,7 +92,7 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <p>$50</p>
+                        <p>$ <span id="tax_amount">00</span></p>
                     </div>
                 </div>
                 <hr>
@@ -98,7 +101,7 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p>$550</p>
+                        <p>$ <span id="total_amount">00</span></p>
                     </div>
                 </div>
             </div>
@@ -106,6 +109,7 @@
         </div>
     </main>
 
+    <script src="script.js"></script>
     <!--Thank You-->
 </body>
 
