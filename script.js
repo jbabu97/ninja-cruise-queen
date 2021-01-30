@@ -65,8 +65,15 @@ function getTicketInput(id) {
 
 //  greetings for booking
 const booking = document.getElementById('booking').addEventListener('click', function () {
-    const greetings = document.getElementById('greetings');
-    greetings.style.display = 'block'
+    const subTotal = document.getElementById('ticket_fare');
+    const subTotalCount = parseInt(subTotal.innerText);
+    
+    if (subTotalCount == 0) {
+        alert('Please add atleast one ticket.')
+    } else {
+        const greetings = document.getElementById('greetings');
+        greetings.style.display = 'block';
+    }    
 });
 
 // remove greetings message
