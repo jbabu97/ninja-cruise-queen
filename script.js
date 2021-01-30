@@ -73,6 +73,8 @@ const booking = document.getElementById('booking').addEventListener('click', fun
     } else {
         const greetings = document.getElementById('greetings');
         greetings.style.display = 'block';
+        const bookingForm =document.getElementById('booking_form');
+        bookingForm.style.display = 'none'
     }    
 });
 
